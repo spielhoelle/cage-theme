@@ -39,7 +39,7 @@ module.exports = function(passport){
 
   /* GET Admin Page */
   router.get('/admin', isAuthenticated, function(req, res){
-    res.render('admin', { user: req.user });
+    res.render('dashboard', { user: req.user });
   });
 
   /* Handle Logout */

@@ -1,18 +1,21 @@
-extends layout
+extends admin
 
 block content
-  div.container
-    div.row
-      div.col-sm-6.col-md-4.offset-md-4.text-center
-        h1.text-center.login-title Sign in to our Passport app
-        div.account-wall
-          img(class='profile-img', src='https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120')
-          form(class='form-signin', action='login', method='POST')
-            input(type='text', name='email' class='form-control', placeholder='Email',required, autofocus)
-            input(type='password', name='password' class='form-control', placeholder='Password', required)
-            button(class='btn btn-lg btn-primary btn-block', type='submit') Sign in
-            span.clearfix
+  .h-100.d-flex.flex-column.justify-content-center.bg-light
+    div.col-sm-6.offset-sm-3.col-md-4.offset-md-4.text-center.d-table
+      img(src= "http://placecage.com/201/201", class="img-fluid rounded-circle")
+      h3.text-center.login-title Pleas sign in!
+      form.connected-form(class='form-signin py-3 py-sm-0', action='login', method='POST')
+        input(type='text', name='email' class='form-control form-control-lg', placeholder='Email',required, autofocus)
+        input(type='password', name='password' class='form-control form-control-lg', placeholder='Password', required)
+        .checkbox.my-3
+          label
+            input(type='checkbox', value='remember-me')
+            |  Remember me
 
-        #message
-        if message
-          h1.text-center.error-message #{message}
+        button(class='btn btn-lg btn-primary btn-block', type='submit') Sign in
+        small © 2017-2018
+
+      #message
+      if message
+        h1.text-center.error-message #{message}

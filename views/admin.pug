@@ -1,11 +1,11 @@
 doctype html
-html
+html.h-100
   head
     title= title
     link(rel='stylesheet', href='./style.css')
     //-link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
 
-  body
+  body.h-100
     //-a(href='/', class='text-center new-account') Frontend
     //-a(href='signout', class='text-center new-account') Logout
     //-h1 Admin
@@ -13,6 +13,6 @@ html
       //-="Welcome: " + user.username
       //-br
       //-="Email: " + user.email
-    #root
+    block content
     script(language='javascript', src='./bundle.js')
 
