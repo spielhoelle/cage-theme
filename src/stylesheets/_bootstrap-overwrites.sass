@@ -1,0 +1,65 @@
+=btn-color($color-pri, $color-sec, $color-border)
+  background-color: $color-pri
+  color: $color-sec
+  border: 1px solid
+  border-color: $color-border
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    background-color: darken($color-pri, 10%) !important
+    color: $color-sec !important
+    border-color: darken($color-border, 10%) !important
+
+
+.btn-primary
+  @include btn-color($bg-primary, white , transparent)
+
+.btn-secondary
+  @include btn-color($bg-secondary, white , transparent)
+
+.btn-light
+  @include btn-color($grey, $grey , transparent)
+
+.btn-outline-primary
+  @include btn-color(transparent, $bg-primary , $bg-primary)
+
+.btn-outline-secondary
+  @include btn-color(transparent, white , white)
+
+.btn-outline-light
+  @include btn-color(transparent, $grey , $grey)
+
+.btn-outline-danger
+  @include btn-color(transparent, $bg-danger , $bg-danger)
+  border-color: $grey
+  color: $grey
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out, color .15s ease-in-out
+
+.bg-primary
+  background-color: $bg-primary !important
+
+.bg-dark
+  background-color: $grey !important
+
+.bg-secondary-light
+  background-color: $bg-secondary !important
+
+.bg-light
+  background-color: $bg-light !important
+
+.bg-secondary
+  background-color: $bg-secondary !important
+
+.color-white
+  color: white
+
+.color-grey
+  color: $grey
+
+.font-weight-bold
+  font-weight: bold
+
+.text-primary
+  color: $bg-primary !important
+

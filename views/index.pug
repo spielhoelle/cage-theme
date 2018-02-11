@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  include partials/header 
+
+  main.bg-white(role='main')
+
+    h2 Posts:
+    ul
+      each val in posts
+        li= val.title
+    include partials/projects
+    include partials/partner
+    include partials/we
+    include partials/footer
+
