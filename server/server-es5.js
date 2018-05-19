@@ -133,7 +133,7 @@ module.exports = require("babel-polyfill");
 "use strict";
 
 
-__webpack_require__(0).config();
+__webpack_require__(0).config({ path: __dirname + '/../.env' });
 /**
  * Module dependencies.
  */
